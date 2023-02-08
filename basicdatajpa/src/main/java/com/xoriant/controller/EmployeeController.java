@@ -21,6 +21,10 @@ public class EmployeeController {
         employeeServiceImpl.SaveData(employee);
         return "Data saved Successfully";
     }
+    @GetMapping("/show")
+    public String showData(){
+        return "Welcome";
+    }
     @GetMapping("/getalldata")
     public List<Employee> getAllData(){
         return  employeeServiceImpl.getAllData();
